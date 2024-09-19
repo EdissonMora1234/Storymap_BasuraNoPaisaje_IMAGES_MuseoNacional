@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi StoryMap con Leyenda Dinámica</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="slides">
+                <!-- Diapositivas -->
+                <div class="slide" data-lat="4.615218" data-lng="-74.068222" data-zoom="18">
+                    <h2>Índice</h2>
+                    <div id="index"></div>
+                </div>
+                <!-- Más diapositivas según sea necesario -->
+
+                <div class="slide" data-lat="4.615218" data-lng="-74.068222" data-zoom="18">
+                    <h2>¿Cuál es el contexto previo a la intervención en los alrededores del Museo Nacional?</h2>
+                    <figure>
+                        <img src="assets/images/canecas.png" alt="Imagen 1">
+                        <figcaption>Alrededores del Museo Nacional antes de la intervención</figcaption> <!-- Título de la imagen -->
+                    </figure>
+                    <p>Actores: <u><strong style="color: red;">50</strong></u></p>
+                    <p>Residuos: <u><strong style="color: red;">112</strong></u></p>
+                    <p>Escenarios: <u><strong style="color: red;">12</strong></u></p>
+
+                    <p>Los resultados del mapa muestran que a pesar de que existen algunas canecas en la zona, muchos transeúntes botan residuos en el espacio público, 
+                    es una zona con alta presencia de vendedores/as informales.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="backToIndexButton">Volver al Índice</div>
+            <div id="legend">
+                <button id="toggle-legend">Minimizar</button> <!-- Botón para minimizar la leyenda -->
+                <div id="legend-content">
+                    <!-- Aquí se generará el contenido de la leyenda dinámicamente -->
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="lib/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
